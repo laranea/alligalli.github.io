@@ -31,6 +31,7 @@ github_username:  jekyll
 
 author: Alessandro Gallina
 copyright: Alessandro Gallina
+title-logo: /images/title-logo.png
 # Build settings
 # theme: minima
 plugins:
