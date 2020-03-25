@@ -29,6 +29,8 @@ url: "https://alligalli.github.io" # the base hostname & protocol for your site,
 twitter_username: jekyllrb
 github_username:  jekyll
 
+author: Alessandro Gallina
+copyright: Alessandro Gallina
 # Build settings
 # theme: minima
 plugins:
