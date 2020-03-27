@@ -10,9 +10,23 @@ layout: default
         {%- assign date_format = "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {%- if page.author -%}
-        • {{ page.author }}
-      {%- endif -%}
+      - 
+      {% assign authorCount = page.authors | size %}
+      {% if authorCount == 0 %}
+        No author
+      {% elsif authorCount == 1 %}
+        {{ page.authors | first }}
+      {% else %}
+        {% for author in page.authors %}
+          {% if forloop.first %}
+            {{ author }}
+          {% elsif forloop.last %}
+            and {{ author }}
+          {% else %}
+            , {{ author }}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </p>
   </header>
 
